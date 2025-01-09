@@ -5,14 +5,16 @@ import './App.css';
 
 function App(){
   const[name,setName]=useState('');
+  const[m,setmale]=useState('');
   const[pass,setPassword]=useState('');
   const[email,setEmail]=useState('');
   const[number,setNumber]=useState('');
 
+
   
   const handleSubmit=(e)=>{
     e.preventDefault();//prevent page load
-   if(name === "DARSHUU" && pass === "IMRD" && email === "IMRD@123" && number === 7359468251)
+   if(name === "DARSHUU" && pass === "IMRD" && email === "IMRD@123" && number === 7359468251 && m === m)
      {
     alert("Login Successful...");
    }
@@ -35,6 +37,17 @@ function App(){
         </div>
         <br></br>
 
+        <div>
+          <label>Gender- </label>
+          <input type="radio" name="m" 
+          value="Male"
+          onChange={(e)=> setmale(e.target.value)}/> Male
+          &nbsp;
+          <input type="radio" name="m" 
+          value="Female"
+          onChange={(e)=> setmale(e.target.value)}/> Female
+        </div>
+        <br></br>
 
         <div>
           <label>Number- </label>
